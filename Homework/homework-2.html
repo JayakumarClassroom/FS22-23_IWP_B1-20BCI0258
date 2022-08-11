@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 style="text-align:center">Cross Site Scripting</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 106px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    width: 100%;
+  }
+  .column table {
+    padding-bottom: 50px;
+    background-color:grey;
+    padding:5px 10px 15px 20px;
+}
+.column table 
+{
+    background-color: grey; 
+    padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">HOME</a>
+  <a href="#our-team">OUR TEAM</a>
+  <a href="#projects">PROJECTS</a>
+  <a href="#contact">CONTACT</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search query" name="search">
+      <button type="submit" style="background-color: blue ;">Go!</button>
+    </form>
+  </div>
+</div>
+<table style="width: 70%;float:left; background-color:silver;margin:7px">
+    <td>
+<div style="padding-left:16px">
+  <h2>What is Cross-site Scripting (XSS)?</h2>
+  <p>Cross-site Scripting (XSS) is a client-side code injection attack. The attacker aims to execute malicious scripts in a web browser of the victim by including malicious code in a legitimate web page or web application. The actual attack occurs when the victim visits the web page or web application that executes the malicious code. The web page or web application becomes a vehicle to deliver the malicious script to the user's browser. Vulnerable vehicles that are commonly used for Cross-site Scripting attacks are forums, message boards, and web pages that allow comments.</p>
+  <section>
+    <h2>What Can the Attacker Do with JavaScript?</h2>
+    <p>XSS vulnerabilities are perceived as less dangerous than for example SQL Injection vulnerabilities. Consequences of the ability to execute JavaScript on a web page may not seem dire at first. Most web browsers run JavaScript in a very tightly controlled environment. JavaScript has limited access to the user's operating system and the user's files.</p>
+     <ul>
+        <li>Malicious JavaScript has access to all the objects that the rest of the web page has access to. This includes access to the user's cookies. Cookies are often used to store session tokens. If an attacker can obtain a user's session cookie, they can impersonate that user, perform actions on behalf of the user, and gain access to the user's sensitive data.</li>
+        <li>JavaScript can read the browser DOM and make arbitrary modifications to it. Luckily, this is only possible within the page where JavaScript is running.</li>
+     </ul>
+</section>
+<section>
+    <h2>How Cross-site Scripting Works?</h2>
+    <p>There are two stages to a typical XSS attack:</p>
+     <ol>
+        <li>To run malicious JavaScript code in a victim's browser, an attacker must first find a way to inject malicious code (payload) into a web page that the victim visits.</li>
+        <li>After that, the victim must visit the web page with the malicious code. If the attack is directed at particular victims, the attacker can use social engineering and/or phishing to send a malicious URL to the victim.</li>
+     </ol>
+</section>
+</div>
+    </td>
+</table>
+<div class="column">
+<table style=" background-color:rgb(0, 255, 166); position:relative; float:right; width:25%; margin:7px; ">
+    <th style="font-weight:bold ; font-size:40px">Related</th>
+    <tr >
+    <td style="background-color: ;#2196F3">
+        <p><a href="https://www.linkedin.com/pulse/information-gathering-akshat-pattiwar/">INFORMATION GATHERING</p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/reverse-engineering-radare2-akshat-pattiwar/">Reverse Engineering - Radare2
+        </p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/introduction-mlops-microsoft-azure-akshat-pattiwar/">Introduction - MLOps with Microsoft Azure
+        </p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/architecture-nginx-built-scale-performance-inside-akshat-pattiwar/">Architecture of NGINX --------- Built for Scale and Performance-Inside NGINX
+        </p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/deploying-machine-learning-model-azure-ml-pipelines-akshat-pattiwar/">Deploying a Machine Learning Model with Azure ML Pipelines
+        </p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/using-elastic-beanstalk-deploy-host-spring-boot-apps-aws-pattiwar/">Deploy and host Spring Boot apps on AWS using Elastic Beanstalk
+        </p>
+        <br>
+        <p><a href="https://www.linkedin.com/pulse/endpoint-detection-response-edr-aws-akshat-pattiwar/">Endpoint Detection and Response (EDR) in AWS
+
+        </p>
+        </td>
+    </tr>
+    
+</table>
+</div>
+    <table id="footer">
+    <tr style="background-color:grey ; height:10px">
+    <td>©Copyright 2022 by Akshat Pattiwar. All Rights Reserved.</td>
+    </tr>
+    </table>
+ 
+</body>
+</html>
