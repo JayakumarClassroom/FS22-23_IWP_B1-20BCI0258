@@ -1,0 +1,20 @@
+#bargraphHorizontal{
+  font:0.7em Arial;
+  border:1px solid #ccc;
+}
+#bargraphHorizontal th{
+  font-weight:normal;
+}
+#bargraphHorizontal td{
+  padding:1px 0;
+  margin:0;
+}
+#bargraphHorizontal .label{
+  text-align:right;
+}
+#bargraphHorizontal .val{
+  text-align:left;
+}
+#bargraphHorizontal img{
+  vertical-align:middle;
+}
