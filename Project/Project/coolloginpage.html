@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="coolpagestyle.css">
+</head>
+
+<body>
+    
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='vitravel.com'><img src="justlogo.jpeg.png"</a>
+            </div>
+            <nav >
+                <ul id='MenuItems'>
+                    <li><a href='#'>Home</a></li>
+
+                    <li class="dropdown-Categories"></a>
+                        <a href="javascript:void(0)" class="dropbtn-Categories">Categories +</a>
+                        <div class="dropdown-content-Categories">
+                            <a href="academic-blocks.html">Academic Blocks</a>
+                            <a href="administrative-offices.html">Administrative Offices</a>
+                            <a href="#">Shops</a>
+                            <a href="#">Coffee Shops</a>
+                            <a href="#">Hostel Blocks</a>
+                            <a href="#">Restaurants</a>
+                            <a href="#">ATMs</a>
+                            <a href="#">Pickup Points</a>
+                            <a href="#">Utilities</a>
+                            <a href="#">Sports</a>
+                            <a href="#">Gates</a>
+                            <a href="#">Halls</a>
+                        </div>
+                    </li>
+                    
+
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Landmarks +</a>
+                        <div class="dropdown-content">
+                            <a href="#">Swimming Pool - MH</a>
+                            <a href="#">Sports Complex - MH</a>
+                            <a href="#">Dominos</a>
+                            <a href="#">DC Bakery</a>
+                            <a href="#">Private Copier Shop</a>
+                        </div>
+                    </li>
+
+                    <li><a href='mainmap.html'>Maps</a></li>
+                    <li><a href='faq.html'>FAQs</a></li>
+                    <li><button class='loginbtn'
+                            onclick="document.getElementById('login-form').style.display='block'"
+                            style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name ' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+        <p>Welcome to VITravel</p>
+        <p>A site for navigating around the campus without hazzle</p>
+        <br><br>
+        <div style="float: left;width:40%; border:2px solid black;margin: auto;">
+            <p style=" font-size:20px">Navigate around the campus easily with VITravel</p>
+            <p style=" font-size:20px">Categorized itno various facilities, you can select the place of your choice to reach the
+                destination</p>
+            <p style=" font-size:20px">With on-map markers and locations within campus for each place like ATMs Reastaurants etc
+                and around the university</p>
+        </div>
+        <div style="float: right;width:40%; border:2px solid black; padding-right:5px">
+            <p style=" font-size:20px">Ranked within the top 200 Universities in Asia (QS - Asia University Rankings 2022)</p>
+            <p style=" font-size:20px">NAAC Accreditation with A++ grade in the 4th cycle</p>
+        
+            <p style=" font-size:20px">Ranked within the top 200 Universities in Asia (QS - Asia University Rankings 2022)
+        
+        </div>
+        
+    </div>
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+</body>
+
+</html>

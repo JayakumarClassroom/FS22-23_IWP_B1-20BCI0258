@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Site</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bg.css">
+        <link rel="javascript" href="backend.js">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <title>Home</title> -->
+    </head>
+    <body>
+      <p id='head1' class='header'>Navigation Site</p>
+      <p id='head2' class='header'>Just</p>
+      <p id='head3' class='header'>For you</p>
+      <p id='head4' class='header'>simple and awesome all the time</p>
+      <p id='head5' class='header'>Welcome to VITravel</p>
+      <div class='light x1'></div>
+      <div class='light x2'></div>
+      <div class='light x3'></div>
+      <div class='light x4'></div>
+      <div class='light x5'></div>
+      <div class='light x6'></div>
+      <div class='light x7'></div>
+      <div class='light x8'></div>
+      <div class='light x9'></div>
+        <div class="site-title">VITravel</div>
+        <div class="info-page">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown-Categories"><a href="search.html"></a>
+                    <a href="javascript:void(0)" class="dropbtn-Categories">Categories</a>
+                    <div class="dropdown-content-Categories">
+                      <a href="academic-blocks.html">Academic Blocks</a>
+                      <a href="administrative-offices.html">Administrative Offices</a>
+                      <a href="#">Shops</a>
+                      <a href="#">Coffee Shops</a>
+                      <a href="HostelBlocks.html">Hostel Blocks</a>
+                      <a href="Restaurants.html">Restaurants</a>
+                      <a href="atm.html">ATMs</a>
+                      <a href="#">Pickup Points</a>
+                      <a href="#">Utilities</a>
+                      <a href="#">Sports</a>
+                      <a href="#">Gates</a>
+                      <a href="#">Halls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Landmarks</a>
+                  <div class="dropdown-content">
+                    <a href="#">Swimming Pool - MH</a>
+                    <a href="#">Sports Complex - MH</a>
+                    <a href="#">Dominos</a>
+                    <a href="#">DC Bakery</a>
+                    <a href="#">Private Copier Shop</a>
+                  </div>
+                </li>
+                <li><a href="mainmap.html">Maps</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+
+
+    <div class="form" style="float:right;">
+        <p style="font-size:20px;"><a href="../logout.php">Logout</a></p>
+    </div>
+              <p>A site for navigating around the campus without hazzle</p>
+              <br><br>
+              
+              <div style="float: left;width:35%; border:2px solid black;">
+                <p style=" font-size:20px">Navigate around the campus easily with VITravel</p>
+                <p style=" font-size:20px">Categorized itno various facilities, you can select the place of your choice to reach the destination</p>
+                <p style=" font-size:20px">With on-map markers and locations within campus for each place like ATMs Reastaurants etc and around the university</p>
+              </div>
+              <div class="weatherWidget" style="float:left ;width:350px; padding-left:2%;"></div>
+
+              <div style="float: right;width:35%; border:2px solid black; padding-right:5px">
+                <p style=" font-size:20px">Ranked within the top 200 Universities in Asia (QS - Asia University Rankings 2022)</p>
+                <p style=" font-size:20px">NAAC Accreditation with A++ grade in the 4th cycle</p>
+
+                <p style=" font-size:20px">Ranked within the top 200 Universities in Asia (QS - Asia University Rankings 2022)
+
+              </div>
+        </div>
+        <script>
+          function myFunction() {
+             var element = document.body;
+             element.classList.toggle("dark-mode");
+          }
+          window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+          window.weatherWidgetConfig.push({
+              selector:".weatherWidget",
+              apiKey:"QTX7BAX9EK58FSQRXMBAWDZ4A", //Sign up for your personal key
+              location:"Chennai, India", //Enter an address
+              unitGroup:"metric", //"us" or "metric"
+              forecastDays:5, //how many days forecast to show
+              title:"Vellore,India", //optional title to show in the 
+              showTitle:true, 
+              showConditions:true
+          });
+         
+          (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+    </body>
+    <style>
+      li {
+        float: left;
+        margin: 0 85px;
+        text-align: center; 
+      }
+.form a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+    </style>
+</html>
